@@ -21,16 +21,35 @@ app.get('/api/hello', function(req, res) {
 
 app.use(express.urlencoded({ extended: false }));
 
+
+
+
+let urlStore = {};
+
 app.post('/api/shorturl', (req, res) => {
   const originalUrl = req.body.url;
+  const shortUrl = 1;
+  urlStore[shortUrl] = originalUrl;
 
   res.json({
     original_url: originalUrl,
-    short_url: 1
+    short_url: shortUrl
   });
+});
+
+app.get('/api/shorturl/:short_url', (req, res) => {
+  const shortUrl = req.params.short_url;
+  const originalUrl = urlStore[shortUrl];
+
+  if (originalUrl) {
+    res.redirect(originalUrl);
+  } else {
+    res.json({ error: 'No short URL found for given input' });
+  }
 });
 
 
 app.listen(port, function() {
   console.log(`Listening on port ${port}`);
 });
+
