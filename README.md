@@ -1,3 +1,37 @@
-# URL Shortener Microservice
+#  Project : URL Shortener Microservice
 
-This is the boilerplate code for the URL Shortener Microservice project. Instructions for building your project can be found at https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/url-shortener-microservice.
+##  About the Project
+
+**Objective** : Build an API that shortens URLs and redirects users to the original link when accessing the short version.  
+This project is part of FreeCodeCamp’s Back End Development and APIs Certification and is completed using Node.js and Express in a cloud-based development environment.
+
+##  Project Tasks
+
+- Create a Node.js project using Express
+- Define a route `/api/shorturl` that:
+  - Accepts a POST request with a URL in the body
+  - Validates the URL format and DNS resolution
+  - Returns a JSON object with the original URL and a short URL identifier
+- Define a route `/api/shorturl/:id` that:
+  - Redirects the user to the original URL based on the short URL identifier
+- Handle invalid URLs gracefully
+- Pass all automated tests provided by FreeCodeCamp
+- Deploy the project to a cloud platform (Replit)
+
+## Langages and Technologies  
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat)  
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white&style=flat)  
+![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white&style=flat)
+
+## Environment  
+![Replit](https://img.shields.io/badge/Replit-667881?logo=replit&logoColor=white&style=flat)
+
+##  Installation
+
+This project runs on Replit and is validated through FreeCodeCamp’s testing suite.
+
+1. Go to the [FreeCodeCamp project page](https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/url-shortener-microservice)  
+2. Fork or import the project into [Replit](https://replit.com/)  
+3. Ensure the server is running and accessible via the provided URL  
+4. Submit your Replit URL to run the automated tests
+
